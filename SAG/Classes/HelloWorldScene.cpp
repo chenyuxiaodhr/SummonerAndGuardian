@@ -1,6 +1,9 @@
 #include "HelloWorldScene.h"
+#include "cocos-ext.h"
+#include "CharConvert.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* HelloWorld::createScene()
 {
@@ -48,21 +51,6 @@ bool HelloWorld::init()
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
 
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
-    
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
     // add "HelloWorld" splash screen"
     auto sprite = Sprite::create("HelloWorld.png");
 
@@ -72,6 +60,11 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
+    LabelTTF *pLabel = LabelTTF::create();
+    pLabel->setString(CharConvert::a2u("ÖÐÎÄ").c_str());
+    pLabel->setPosition(ccp(180.f, 320.f));
+    this->addChild(pLabel);
+
     return true;
 }
 

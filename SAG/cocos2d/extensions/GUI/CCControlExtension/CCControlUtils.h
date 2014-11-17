@@ -36,7 +36,7 @@
 
 #include "2d/CCSprite.h"
 #include "../../ExtensionMacros.h"
-#include "extensions/ExtensionExport.h"
+#include "../../ExtensionExport.h"
 
 NS_CC_EXT_BEGIN
 

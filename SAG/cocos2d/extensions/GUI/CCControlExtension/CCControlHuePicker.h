@@ -35,7 +35,7 @@
 
 #include "CCControl.h"
 #include "CCInvocation.h"
-#include "extensions/ExtensionExport.h"
+#include "../../ExtensionExport.h"
 
 NS_CC_EXT_BEGIN
 
