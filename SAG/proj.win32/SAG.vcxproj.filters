@@ -19,6 +19,9 @@
     <Filter Include="src\framework\tools">
       <UniqueIdentifier>{d9326da0-95ae-4243-9943-efe85bd4259e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\dataStructs">
+      <UniqueIdentifier>{2e11dbc6-f572-4f60-b76a-1f6c2bb604f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,6 +45,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\layout\StartLayer.h">
       <Filter>src\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\dataStructs\DataManager.h">
+      <Filter>src\dataStructs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
