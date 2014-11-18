@@ -25,9 +25,11 @@
       <Filter>win32</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\framework\tools\CharConvert.cpp">
       <Filter>src\framework\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layout\StartLayer.cpp">
+      <Filter>src\Layout</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -35,9 +37,11 @@
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\framework\tools\CharConvert.h">
       <Filter>src\framework\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\StartLayer.h">
+      <Filter>src\Layout</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
