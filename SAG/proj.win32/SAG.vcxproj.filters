@@ -34,6 +34,9 @@
     <ClCompile Include="..\Classes\layout\StartLayer.cpp">
       <Filter>src\Layout</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\layout\BattleMap.cpp">
+      <Filter>src\Layout</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -48,6 +51,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\dataStructs\DataManager.h">
       <Filter>src\dataStructs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\BattleMap.h">
+      <Filter>src\Layout</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
