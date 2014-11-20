@@ -1,20 +1,22 @@
-#include "PlayLayer.h"
 #include "OperationLayer.h"
+
 
 USING_NS_CC;
 
-PlayLayer::PlayLayer()
+
+
+OperationLayer::OperationLayer()
 {
 
 }
 
-PlayLayer::~PlayLayer()
+OperationLayer::~OperationLayer()
 {
 
 
 }
 
-bool PlayLayer::init()
+bool OperationLayer::init()
 {
     if ( ! Layer::init() )
     {
@@ -23,6 +25,4 @@ bool PlayLayer::init()
 
     return true;
 }
-
-
 
