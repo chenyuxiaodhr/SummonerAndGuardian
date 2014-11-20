@@ -37,6 +37,15 @@
     <ClCompile Include="..\Classes\layout\BattleMap.cpp">
       <Filter>src\Layout</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\layout\EditLayer.cpp">
+      <Filter>src\Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layout\PlayLayer.cpp">
+      <Filter>src\Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layout\OperationLayer.cpp">
+      <Filter>src\Layout</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -53,6 +62,15 @@
       <Filter>src\dataStructs</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\layout\BattleMap.h">
+      <Filter>src\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\EditLayer.h">
+      <Filter>src\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\PlayLayer.h">
+      <Filter>src\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\OperationLayer.h">
       <Filter>src\Layout</Filter>
     </ClInclude>
   </ItemGroup>
