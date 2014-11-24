@@ -1,5 +1,6 @@
 #include "StartLayer.h"
 #include "CharConvert.h"
+#include "PlayLayer.h"
 
 USING_NS_CC;
 
@@ -126,7 +127,12 @@ void StartLayer::__addPlayEntry()
             {
                 m_bPlayIsPushed = false;
                 pTitle->setScale(1.f);
+
                 //switch to PlayLayer
+                Scene *pScene = Scene::create();
+                PlayLayer *pPlayLayer = PlayLayer::create();
+                pScene->addChild(pPlayLayer);
+                Director::sharedDirector()->replaceScene(pScene);
             }
         }
     };

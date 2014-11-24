@@ -11,6 +11,7 @@
 #include "cocos2d.h"
 
 class OperationLayer;
+class BattleMap;
 
 class PlayLayer : public cocos2d::Layer
 {
@@ -25,6 +26,7 @@ private:
 
 private:
     OperationLayer *m_pOperationLayer = nullptr; // 操作面板的layer
+    BattleMap *m_pBattleMap = nullptr; // 棋盘的layer
 };
 
 
