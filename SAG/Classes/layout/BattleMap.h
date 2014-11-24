@@ -42,13 +42,19 @@ class BattleMap
 	, public cocos2d::Layer
 {
 public:
-	CREATE_FUNC(BattleMap);
+	//CREATE_FUNC(BattleMap);
+	static BattleMap* create(cocos2d::Size);
 
-	virtual bool init();
+private:
+	virtual bool init(cocos2d::Size contentSize);
 
 	BattleMap();
 	~BattleMap();
 
+	virtual void scrollViewDidScroll(cocos2d::extension::ScrollView* view);
+	virtual void scrollViewDidZoom(cocos2d::extension::ScrollView* view);
+
 private:
 	MapTile m_mapTile[10][20];
+	cocos2d::extension::ScrollView* m_battleView;
 };

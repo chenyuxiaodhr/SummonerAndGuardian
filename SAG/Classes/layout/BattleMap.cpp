@@ -35,16 +35,58 @@ BattleMap::~BattleMap()
 
 }
 
-bool BattleMap::init()
+BattleMap* BattleMap::create(cocos2d::Size contentSize)
+{
+	BattleMap *pRet = new BattleMap();
+	if (pRet && pRet->init(contentSize))
+	{
+		pRet->autorelease();
+		return pRet;
+	}
+	else
+	{
+		delete pRet;
+		pRet = NULL;
+		return NULL;
+	}
+}
+
+bool BattleMap::init(cocos2d::Size contentSize)
 {
 	if (!Layer::init())
 	{
 		return false;
 	}
 
-	ScrollView *scrollView = ScrollView::create(this->getParent()->getContentSize());
+	Node* container = Node::create();
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 20; j++)
+		{
+			container->addChild(m_mapTile[i][j].getMapImage());
+			m_mapTile[i][j].getMapImage()->setPosition(
+				m_mapTile[i][j].getMapImage()->getContentSize().width * (i + 0.5),
+				m_mapTile[i][j].getMapImage()->getContentSize().height * (j + 0.5));
+		}
+	}
 
-	this->addChild(scrollView);
+	container->setContentSize(Size(m_mapTile[0][0].getMapImage()->getContentSize().height * 10
+		, m_mapTile[0][0].getMapImage()->getContentSize().height * 20));
+
+	m_battleView = ScrollView::create(contentSize, container);
+	this->addChild(m_battleView);
+	m_battleView->setContentOffset(ccp(0, m_battleView->getViewSize().height - container->getContentSize().height));
+	m_battleView->setDelegate(this);
 
 	return true;
+}
+
+void BattleMap::scrollViewDidScroll(cocos2d::extension::ScrollView* view)
+{
+	log("%f", m_battleView->getContentOffset().y);
+}
+
+void BattleMap::scrollViewDidZoom(cocos2d::extension::ScrollView* view)
+{
+
 }
