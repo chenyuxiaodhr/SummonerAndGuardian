@@ -56,5 +56,5 @@ private:
 
 private:
 	MapTile m_mapTile[10][20];
-	cocos2d::extension::ScrollView* m_battleView;
+	cocos2d::extension::ScrollView* m_battleView = nullptr;
 };

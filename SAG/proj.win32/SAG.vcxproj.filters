@@ -22,6 +22,9 @@
     <Filter Include="src\dataStructs">
       <UniqueIdentifier>{2e11dbc6-f572-4f60-b76a-1f6c2bb604f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Layout\sag_ui">
+      <UniqueIdentifier>{37bf123c-8ffb-480b-a284-a82d59f05265}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -43,8 +46,14 @@
     <ClCompile Include="..\Classes\layout\PlayLayer.cpp">
       <Filter>src\Layout</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\layout\OperationLayer.cpp">
+    <ClCompile Include="..\Classes\layout\InformationLayer.cpp">
       <Filter>src\Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layout\sag_ui\LifeBar.cpp">
+      <Filter>src\Layout\sag_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layout\sag_ui\SignetInfoBar.cpp">
+      <Filter>src\Layout\sag_ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,8 +79,14 @@
     <ClInclude Include="..\Classes\layout\PlayLayer.h">
       <Filter>src\Layout</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\layout\OperationLayer.h">
+    <ClInclude Include="..\Classes\layout\InformationLayer.h">
       <Filter>src\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\sag_ui\LifeBar.h">
+      <Filter>src\Layout\sag_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layout\sag_ui\SignetInfoBar.h">
+      <Filter>src\Layout\sag_ui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

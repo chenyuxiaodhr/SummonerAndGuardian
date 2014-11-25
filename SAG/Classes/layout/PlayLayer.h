@@ -10,7 +10,7 @@
 
 #include "cocos2d.h"
 
-class OperationLayer;
+class InformationLayer;
 class BattleMap;
 
 class PlayLayer : public cocos2d::Layer
@@ -25,7 +25,7 @@ private:
     bool init() override;
 
 private:
-    OperationLayer *m_pOperationLayer = nullptr; // 操作面板的layer
+    InformationLayer *m_pInformationLayer = nullptr; // 操作面板的layer
     BattleMap *m_pBattleMap = nullptr; // 棋盘的layer
 };
 

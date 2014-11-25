@@ -73,7 +73,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;$(EngineRoot)extensions\GUI\CCControlExtension;../Classes/layout;../Classes/framework;../Classes/framework/tools;../cocos2d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;$(EngineRoot)extensions\GUI\CCControlExtension;../Classes/layout;../Classes/framework;../Classes/framework/tools;../cocos2d;../Classes/layout/sag_ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -141,8 +141,10 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\framework\tools\CharConvert.cpp" />
     <ClCompile Include="..\Classes\layout\BattleMap.cpp" />
     <ClCompile Include="..\Classes\layout\EditLayer.cpp" />
-    <ClCompile Include="..\Classes\layout\OperationLayer.cpp" />
+    <ClCompile Include="..\Classes\layout\InformationLayer.cpp" />
     <ClCompile Include="..\Classes\layout\PlayLayer.cpp" />
+    <ClCompile Include="..\Classes\layout\sag_ui\LifeBar.cpp" />
+    <ClCompile Include="..\Classes\layout\sag_ui\SignetInfoBar.cpp" />
     <ClCompile Include="..\Classes\layout\StartLayer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -152,8 +154,10 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\framework\tools\CharConvert.h" />
     <ClInclude Include="..\Classes\layout\BattleMap.h" />
     <ClInclude Include="..\Classes\layout\EditLayer.h" />
-    <ClInclude Include="..\Classes\layout\OperationLayer.h" />
+    <ClInclude Include="..\Classes\layout\InformationLayer.h" />
     <ClInclude Include="..\Classes\layout\PlayLayer.h" />
+    <ClInclude Include="..\Classes\layout\sag_ui\LifeBar.h" />
+    <ClInclude Include="..\Classes\layout\sag_ui\SignetInfoBar.h" />
     <ClInclude Include="..\Classes\layout\StartLayer.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
