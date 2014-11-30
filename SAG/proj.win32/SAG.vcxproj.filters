@@ -55,6 +55,12 @@
     <ClCompile Include="..\Classes\layout\sag_ui\SignetInfoBar.cpp">
       <Filter>src\Layout\sag_ui</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\framework\tools\AppConfig.cpp">
+      <Filter>src\framework\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\framework\tools\ResourceManager.cpp">
+      <Filter>src\framework\tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -87,6 +93,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\layout\sag_ui\SignetInfoBar.h">
       <Filter>src\Layout\sag_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\tools\AppConfig.h">
+      <Filter>src\framework\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework\tools\ResourceManager.h">
+      <Filter>src\framework\tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

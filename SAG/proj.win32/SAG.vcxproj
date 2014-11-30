@@ -138,7 +138,9 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\framework\tools\AppConfig.cpp" />
     <ClCompile Include="..\Classes\framework\tools\CharConvert.cpp" />
+    <ClCompile Include="..\Classes\framework\tools\ResourceManager.cpp" />
     <ClCompile Include="..\Classes\layout\BattleMap.cpp" />
     <ClCompile Include="..\Classes\layout\EditLayer.cpp" />
     <ClCompile Include="..\Classes\layout\InformationLayer.cpp" />
@@ -151,7 +153,9 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\dataStructs\DataManager.h" />
+    <ClInclude Include="..\Classes\framework\tools\AppConfig.h" />
     <ClInclude Include="..\Classes\framework\tools\CharConvert.h" />
+    <ClInclude Include="..\Classes\framework\tools\ResourceManager.h" />
     <ClInclude Include="..\Classes\layout\BattleMap.h" />
     <ClInclude Include="..\Classes\layout\EditLayer.h" />
     <ClInclude Include="..\Classes\layout\InformationLayer.h" />

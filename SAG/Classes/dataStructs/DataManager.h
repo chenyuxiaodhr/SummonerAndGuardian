@@ -3,8 +3,10 @@
 * Author: CdiajadeX
 * Date: 2014/11/18
 ************************/
-#ifndef DataManager
-#define DataManager
+#ifndef _DataManager_H_
+#define _DataManager_H_
+
+#include <assert.h>
 
 enum Effects {
 	Summon,
@@ -31,6 +33,7 @@ struct Dice
 
 	CountOfEffects getEffectByIndex(int index)
 	{
+        assert(index >= 0 && index < 6);
 		return effectOfEachSide[index - 1];
 	}
 };
