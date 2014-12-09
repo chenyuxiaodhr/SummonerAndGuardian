@@ -58,4 +58,13 @@ struct Guardian
 	int level;
 };
 
+typedef struct Signet
+{
+    unsigned int nAttack = 0;
+    unsigned int nDefend = 0;
+    unsigned int nMove = 0;
+    unsigned int nMagic = 0;
+    unsigned int nTrick = 0;
+}Signet;
+
 #endif //end of file

@@ -34,7 +34,7 @@ bool InformationLayer::init()
 
     m_pMineLife = LifeBar::create(3);
     m_pMineLife->setAnchorPoint(Vec2::ZERO);
-    m_pMineLife->setPosition(AppConfig::getRealVec2(Vec2(40.f, 460.f)));
+    m_pMineLife->setPosition(AppConfig::getRealVec2(Vec2(60.f, 460.f)));
     this->addChild(m_pMineLife);
 
     m_pMineSignet = SignetInfoBar::create();
@@ -50,7 +50,7 @@ bool InformationLayer::init()
 
     m_pEnemyLife = LifeBar::create(3);
     m_pEnemyLife->setAnchorPoint(Vec2::ZERO);
-    m_pEnemyLife->setPosition(AppConfig::getRealVec2(Vec2(220.f, 460.f)));
+    m_pEnemyLife->setPosition(AppConfig::getRealVec2(Vec2(240.f, 460.f)));
     this->addChild(m_pEnemyLife);
 
     m_pEnemySignet = SignetInfoBar::create();
@@ -58,8 +58,33 @@ bool InformationLayer::init()
     m_pEnemySignet->setPosition(AppConfig::getRealVec2(Vec2(190.f, 460.f)));
     this->addChild(m_pEnemySignet);
 
-
-
     return true;
 }
 
+void InformationLayer::setLife(unsigned int nLife, PlayerType eType)
+{
+    switch (eType)
+    {
+    case PlayerType::kPlayerTypePos:
+        if ( m_pMineLife )
+        {
+            m_pMineLife->setLife(nLife);
+        }
+        break;
+    case PlayerType::kPlayerTypeNeg:
+        if ( m_pEnemyLife )
+        {
+            m_pEnemyLife->setLife(nLife);
+        }
+        break;
+    default:
+        CCAssert(false, "[InformationLayer][setLife] unexpected type");
+        break;
+    }
+}
+
+void InformationLayer::setSignet(const Signet &stSignet, PlayerType eType)
+{
+
+
+}

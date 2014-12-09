@@ -1,4 +1,6 @@
 #include "LifeBar.h"
+#include <assert.h>
+
 #include "ResourceManager.h"
 #include "AppConfig.h"
 
@@ -43,7 +45,7 @@ bool LifeBar::init(unsigned int maxHeartCount)
 
 void LifeBar::__initHeart()
 {
-    string heartPath = ResourceManager::getImagerPathByKey("fullHeart");
+    string heartPath = ResourceManager::getImagerPathByKey("emptyHeart");
 
     float scaleSize = 0.25f;
     float tempX = 0.f;
@@ -58,9 +60,37 @@ void LifeBar::__initHeart()
         pHeart->setAnchorPoint(Vec2::ZERO);
         pHeart->setPosition(Vec2(tempX, 0.f));
         addChild(pHeart);
+        m_vecHeart.push_back(pHeart);
 
         tempX += heartSize.width + 3.f;
     }
 }
 
+void LifeBar::setLife(unsigned int nLife)
+{
+    if ( nLife <= m_nMaxHeartCount )
+    {
+        m_nCurrentLife = nLife;
+        __updateHeart();
+    }
+}
 
+void LifeBar::__updateHeart()
+{
+    CCAssert(m_nCurrentLife <= m_nMaxHeartCount
+        , "[LifeBar][__updateHeart] current life %d is more than max life %d"
+        , m_nCurrentLife, m_nMaxHeartCount);
+
+    int index = 0;
+    for (; index < m_nCurrentLife; ++index)
+    {
+        Sprite* pHeart = m_vecHeart[index];
+        pHeart->setTexture(ResourceManager::getImagerPathByKey("fullHeart"));
+    }
+
+    for (; index < m_nMaxHeartCount; ++index)
+    {
+        Sprite* pHeart = m_vecHeart[index];
+        pHeart->setTexture(ResourceManager::getImagerPathByKey("emptyHeart"));
+    }
+}

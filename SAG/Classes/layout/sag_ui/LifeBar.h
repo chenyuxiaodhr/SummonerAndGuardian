@@ -16,6 +16,7 @@ public:
     ~LifeBar();
     
     static LifeBar* create(unsigned int maxHeartCount);
+    void setLife(unsigned int nLife);
 
 protected:
     LifeBar();
@@ -24,8 +25,13 @@ protected:
 private:
     void __initHeart();
 
+    void __updateHeart();
+
 private:
     unsigned int m_nMaxHeartCount = 3;
+    unsigned int m_nCurrentLife = 0;
+
+    std::vector<cocos2d::Sprite*> m_vecHeart;
 };
 
 

@@ -9,15 +9,24 @@
 #define _INFORMATIONLAYER_H_
 
 #include "cocos2d.h"
+#include "DataManager.h"
 
 class LifeBar;
 class SignetInfoBar;
+
+enum class PlayerType {
+    kPlayerTypePos = 0,
+    kPlayerTypeNeg
+};
 
 class InformationLayer : public cocos2d::Layer
 {
 public:
     ~InformationLayer();
     CREATE_FUNC(InformationLayer);
+
+    void setLife(unsigned int nLife, PlayerType eType);
+    void setSignet(const Signet &stSignet, PlayerType eType);
 
 private:
     InformationLayer();

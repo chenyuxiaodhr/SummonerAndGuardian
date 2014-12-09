@@ -20,4 +20,7 @@ bool SignetInfoBar::init()
     return true;
 }
 
+void SignetInfoBar::setSignet(const Signet &stSignet)
+{
 
+}

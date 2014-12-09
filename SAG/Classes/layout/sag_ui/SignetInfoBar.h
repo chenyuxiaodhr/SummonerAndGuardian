@@ -9,12 +9,15 @@
 #define _SIGNETINFOBAR_H_
 
 #include "cocos2d.h"
+#include "DataManager.h"
 
 class SignetInfoBar : public cocos2d::Node
 {
 public:
     ~SignetInfoBar();
     CREATE_FUNC(SignetInfoBar);
+
+    void setSignet(const Signet &stSignet);
 
 protected:
     SignetInfoBar();
